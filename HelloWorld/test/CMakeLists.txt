@@ -4,6 +4,7 @@ project(HelloWorldTests VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 find_package(GTest REQUIRED)
+find_package(Threads REQUIRED)
 
 add_executable(${PROJECT_NAME}_boost test_version_boost.cpp)
 add_executable(${PROJECT_NAME}_google test_version_google.cpp)

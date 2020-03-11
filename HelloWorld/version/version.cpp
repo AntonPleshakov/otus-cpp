@@ -1,4 +1,5 @@
 #include "version.h"
+#include "version_def.h"
 
 int version()
 {

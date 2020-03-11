@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 project(HelloWorldVersion VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
-add_definitions(-DPROJECT_VERSION_PATCH=${PROJECT_VERSION_PATCH})
+configure_file(version_def.h.in ${CMAKE_CURRENT_SOURCE_DIR}/version_def.h)
 
 add_library(${PROJECT_NAME} version.cpp)
 
